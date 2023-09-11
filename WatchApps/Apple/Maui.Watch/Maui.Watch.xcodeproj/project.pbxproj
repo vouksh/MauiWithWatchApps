@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		86C09B8A2A7C3222003F9ABF /* CommandStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C09B872A7C3222003F9ABF /* CommandStatus.swift */; };
+		86C09B8B2A7C3222003F9ABF /* CommunicationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C09B882A7C3222003F9ABF /* CommunicationHandler.swift */; };
+		86C09B8C2A7C3222003F9ABF /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C09B892A7C3222003F9ABF /* SessionDelegator.swift */; };
+		86C09B8E2A7C328C003F9ABF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C09B8D2A7C328C003F9ABF /* Helper.swift */; };
+		86C09B912A7C32D6003F9ABF /* SystemPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 86C09B902A7C32D6003F9ABF /* SystemPackage */; };
+		86F6C48D2A3B49F600CF22C9 /* Maui.Watch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 86F6C48C2A3B49F600CF22C9 /* Maui.Watch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		86F6C4922A3B49F600CF22C9 /* Maui_WatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F6C4912A3B49F600CF22C9 /* Maui_WatchApp.swift */; };
+		86F6C4942A3B49F600CF22C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F6C4932A3B49F600CF22C9 /* ContentView.swift */; };
+		86F6C4962A3B49F800CF22C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86F6C4952A3B49F800CF22C9 /* Assets.xcassets */; };
+		86F6C4992A3B49F800CF22C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86F6C4982A3B49F800CF22C9 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		86F6C48E2A3B49F600CF22C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86F6C4802A3B49F600CF22C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86F6C48B2A3B49F600CF22C9;
+			remoteInfo = "Maui.Watch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		86F6C49F2A3B49F800CF22C9 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				86F6C48D2A3B49F600CF22C9 /* Maui.Watch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		86C09B872A7C3222003F9ABF /* CommandStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandStatus.swift; sourceTree = "<group>"; };
+		86C09B882A7C3222003F9ABF /* CommunicationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicationHandler.swift; sourceTree = "<group>"; };
+		86C09B892A7C3222003F9ABF /* SessionDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegator.swift; sourceTree = "<group>"; };
+		86C09B8D2A7C328C003F9ABF /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		86F6C4862A3B49F600CF22C9 /* Maui.Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maui.Watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86F6C48C2A3B49F600CF22C9 /* Maui.Watch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Maui.Watch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86F6C4912A3B49F600CF22C9 /* Maui_WatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maui_WatchApp.swift; sourceTree = "<group>"; };
+		86F6C4932A3B49F600CF22C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		86F6C4952A3B49F800CF22C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		86F6C4982A3B49F800CF22C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		86F6C4A32A3B587E00CF22C9 /* Maui-Watch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Maui-Watch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86F6C4892A3B49F600CF22C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86C09B912A7C32D6003F9ABF /* SystemPackage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86F6C47F2A3B49F600CF22C9 = {
+			isa = PBXGroup;
+			children = (
+				86F6C4902A3B49F600CF22C9 /* Maui.Watch Watch App */,
+				86F6C4872A3B49F600CF22C9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		86F6C4872A3B49F600CF22C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86F6C4862A3B49F600CF22C9 /* Maui.Watch.app */,
+				86F6C48C2A3B49F600CF22C9 /* Maui.Watch Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86F6C4902A3B49F600CF22C9 /* Maui.Watch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				86C09B872A7C3222003F9ABF /* CommandStatus.swift */,
+				86C09B882A7C3222003F9ABF /* CommunicationHandler.swift */,
+				86C09B892A7C3222003F9ABF /* SessionDelegator.swift */,
+				86F6C4A32A3B587E00CF22C9 /* Maui-Watch-Watch-App-Info.plist */,
+				86F6C4912A3B49F600CF22C9 /* Maui_WatchApp.swift */,
+				86F6C4932A3B49F600CF22C9 /* ContentView.swift */,
+				86F6C4952A3B49F800CF22C9 /* Assets.xcassets */,
+				86F6C4972A3B49F800CF22C9 /* Preview Content */,
+				86C09B8D2A7C328C003F9ABF /* Helper.swift */,
+			);
+			path = "Maui.Watch Watch App";
+			sourceTree = "<group>";
+		};
+		86F6C4972A3B49F800CF22C9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				86F6C4982A3B49F800CF22C9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86F6C4852A3B49F600CF22C9 /* Maui.Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86F6C4A02A3B49F800CF22C9 /* Build configuration list for PBXNativeTarget "Maui.Watch" */;
+			buildPhases = (
+				86F6C4842A3B49F600CF22C9 /* Resources */,
+				86F6C49F2A3B49F800CF22C9 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86F6C48F2A3B49F600CF22C9 /* PBXTargetDependency */,
+			);
+			name = Maui.Watch;
+			productName = Maui.Watch;
+			productReference = 86F6C4862A3B49F600CF22C9 /* Maui.Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		86F6C48B2A3B49F600CF22C9 /* Maui.Watch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86F6C49C2A3B49F800CF22C9 /* Build configuration list for PBXNativeTarget "Maui.Watch Watch App" */;
+			buildPhases = (
+				86F6C4882A3B49F600CF22C9 /* Sources */,
+				86F6C4892A3B49F600CF22C9 /* Frameworks */,
+				86F6C48A2A3B49F600CF22C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Maui.Watch Watch App";
+			packageProductDependencies = (
+				86C09B902A7C32D6003F9ABF /* SystemPackage */,
+			);
+			productName = "Maui.Watch Watch App";
+			productReference = 86F6C48C2A3B49F600CF22C9 /* Maui.Watch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86F6C4802A3B49F600CF22C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					86F6C4852A3B49F600CF22C9 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					86F6C48B2A3B49F600CF22C9 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 86F6C4832A3B49F600CF22C9 /* Build configuration list for PBXProject "Maui.Watch" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 86F6C47F2A3B49F600CF22C9;
+			packageReferences = (
+				86C09B8F2A7C32D6003F9ABF /* XCRemoteSwiftPackageReference "swift-system" */,
+			);
+			productRefGroup = 86F6C4872A3B49F600CF22C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86F6C4852A3B49F600CF22C9 /* Maui.Watch */,
+				86F6C48B2A3B49F600CF22C9 /* Maui.Watch Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86F6C4842A3B49F600CF22C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86F6C48A2A3B49F600CF22C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86F6C4992A3B49F800CF22C9 /* Preview Assets.xcassets in Resources */,
+				86F6C4962A3B49F800CF22C9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86F6C4882A3B49F600CF22C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86F6C4942A3B49F600CF22C9 /* ContentView.swift in Sources */,
+				86C09B8B2A7C3222003F9ABF /* CommunicationHandler.swift in Sources */,
+				86C09B8C2A7C3222003F9ABF /* SessionDelegator.swift in Sources */,
+				86C09B8A2A7C3222003F9ABF /* CommandStatus.swift in Sources */,
+				86F6C4922A3B49F600CF22C9 /* Maui_WatchApp.swift in Sources */,
+				86C09B8E2A7C328C003F9ABF /* Helper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86F6C48F2A3B49F600CF22C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86F6C48B2A3B49F600CF22C9 /* Maui.Watch Watch App */;
+			targetProxy = 86F6C48E2A3B49F600CF22C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		86F6C49A2A3B49F800CF22C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		86F6C49B2A3B49F800CF22C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		86F6C49D2A3B49F800CF22C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Maui.Watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 4Y8PF2RTLY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Maui-Watch-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Maui.Watch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.example.mauiwithwatch;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.mauiwithwatch.watchapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		86F6C49E2A3B49F800CF22C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Maui.Watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 4Y8PF2RTLY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Maui-Watch-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Maui.Watch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.example.mauiwithwatch;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.mauiwithwatch.watchapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
+		86F6C4A12A3B49F800CF22C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Y8PF2RTLY;
+				INFOPLIST_KEY_CFBundleDisplayName = Maui.Watch;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.mauiwithwatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		86F6C4A22A3B49F800CF22C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Y8PF2RTLY;
+				INFOPLIST_KEY_CFBundleDisplayName = Maui.Watch;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.mauiwithwatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86F6C4832A3B49F600CF22C9 /* Build configuration list for PBXProject "Maui.Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86F6C49A2A3B49F800CF22C9 /* Debug */,
+				86F6C49B2A3B49F800CF22C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86F6C49C2A3B49F800CF22C9 /* Build configuration list for PBXNativeTarget "Maui.Watch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86F6C49D2A3B49F800CF22C9 /* Debug */,
+				86F6C49E2A3B49F800CF22C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86F6C4A02A3B49F800CF22C9 /* Build configuration list for PBXNativeTarget "Maui.Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86F6C4A12A3B49F800CF22C9 /* Debug */,
+				86F6C4A22A3B49F800CF22C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		86C09B8F2A7C32D6003F9ABF /* XCRemoteSwiftPackageReference "swift-system" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-system.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		86C09B902A7C32D6003F9ABF /* SystemPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86C09B8F2A7C32D6003F9ABF /* XCRemoteSwiftPackageReference "swift-system" */;
+			productName = SystemPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 86F6C4802A3B49F600CF22C9 /* Project object */;
+}

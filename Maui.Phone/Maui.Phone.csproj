@@ -1,0 +1,107 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net8.0-ios;net8.0-android</TargetFrameworks>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>Maui.Phone</RootNamespace>
+        <UseMaui>true</UseMaui>
+        <SingleProject>true</SingleProject>
+        <ImplicitUsings>enable</ImplicitUsings>
+
+        <!-- Display name -->
+        <ApplicationTitle>Maui.Phone</ApplicationTitle>
+
+        <!-- App Identifier -->
+        <ApplicationId>com.example.mauiwithwatch</ApplicationId>
+        <ApplicationIdGuid>25A24E9E-9D58-4FEA-A34C-34D7537496B8</ApplicationIdGuid>
+
+        <!-- Versions -->
+        <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+        <ApplicationVersion>1</ApplicationVersion>
+
+        <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
+        <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">29.0</SupportedOSPlatformVersion>
+        <BuildWithMSBuildOnMono>false</BuildWithMSBuildOnMono>
+        <UseMauiEssentials>true</UseMauiEssentials>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- App Icon -->
+        <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+
+        <!-- Splash Screen -->
+        <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+
+        <!-- Images -->
+        <MauiImage Include="Resources\Images\*" />
+        <MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+        <BundleResource Include="OpenSans-Regular.ttf">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </BundleResource>
+        <BundleResource Include="OpenSans-Semibold.ttf">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </BundleResource>
+
+        <!-- Custom Fonts -->
+        <MauiFont Include="Resources\Fonts\*" />
+
+        <!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+        <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+    </ItemGroup>
+
+    <ItemGroup>
+		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Essentials" Version="$(MauiVersion)" />
+        <PackageReference Include="CommunityToolkit.Maui" Version="5.3.0" />
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0-preview.7.23375.6" />
+        <PackageReference Include="Serilog" Version="3.0.1" />
+        <PackageReference Include="Serilog.Extensions.Logging" Version="7.0.0" />
+        <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+        <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Interfaces\" />
+      <Folder Include="Views\" />
+    </ItemGroup>
+	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
+		<WatchAppProjectName>Maui.Watch</WatchAppProjectName>
+		<WatchAppPlatformType>watchos</WatchAppPlatformType>
+		<WatchAppBuildPath>../WatchApps/Apple/$(WatchAppProjectName)/DerivedData/$(WatchAppProjectName)/Build/Products/$(Configuration)-$(WatchAppPlatformType)</WatchAppBuildPath>
+		<WatchAppBundle>Maui.Watch Watch App.app</WatchAppBundle>
+		<WatchAppBundleFullPath>$(WatchAppBuildPath)/$(WatchAppBundle)</WatchAppBundleFullPath>
+	</PropertyGroup>
+	<ItemGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
+		<_ResolvedWatchAppReferences Include="$(WatchAppBundleFullPath)" />
+	</ItemGroup>
+	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
+		<CreateAppBundleDependsOn>
+			_CopyWatchOS2AppsToBundle;
+			$(CreateAppBundleDependsOn);
+		</CreateAppBundleDependsOn>
+		<ProvisioningType>automatic</ProvisioningType>
+	</PropertyGroup>
+	<ItemGroup Condition="$(TargetFramework.StartsWith('net8.0-android')) != true">
+		<Compile Remove="**\Android\**\*.cs" />
+		<None Include="**\Android\**\*.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+	</ItemGroup>
+	<ItemGroup Condition="$(TargetFramework.StartsWith('net8.0-ios')) != true">
+		<Compile Remove="**\iOS\**\*.cs" />
+		<None Include="**\iOS\**\*.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+	</ItemGroup>
+    <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
+      <PackageReference Include="Xamarin.AndroidX.Activity" Version="1.7.2.1" /> 
+      <PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.7.2.1" />
+	<PackageReference Include="Xamarin.GooglePlayServices.Wearable">
+		<Version>118.0.0.3</Version>
+	</PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+      <MauiAsset Include="Platforms\Android\Resources\values\wear.xml" />
+      <MauiAsset Include="Platforms\Android\Resources\xml\wearable_app_desc.xml" />
+    </ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Maui.WatchCommunication\Maui.WatchCommunication.csproj" />
+	</ItemGroup>
+</Project>

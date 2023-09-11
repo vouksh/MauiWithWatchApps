@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui.Phone.MainPage">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Button
+                Text="Alert Page"
+                HorizontalOptions="Center" 
+                Command="{Binding GoToAlertPageCommand}"/>
+            <Button
+                Text="Chart Page"
+                HorizontalOptions="Center" 
+                Command="{Binding GoToChartPageCommand}"/>
+            <Button
+                Text="Login Page"
+                HorizontalOptions="Center"
+                Command="{Binding GoToPageCommand}"
+                CommandParameter="Login" />
+            <Button
+                Text="Bluetooth Test"
+                HorizontalOptions="CenterAndExpand"
+                Command="{Binding GoToPageCommand}"
+                CommandParameter="BluetoothTest" />
+            <Label
+                Text="{Binding Message}"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="Large" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,3 @@
+<resources>
+    <string name="hello_world">Connected to device: %1$s</string>
+</resources>

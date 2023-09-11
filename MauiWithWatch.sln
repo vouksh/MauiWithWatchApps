@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maui.Phone", "Maui.Phone\Maui.Phone.csproj", "{FEE12EBD-0C99-47B6-905D-9BCB9701C223}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maui.WatchCommunication", "Maui.WatchCommunication\Maui.WatchCommunication.csproj", "{0F5D39AE-0812-427B-B871-D0156AB968E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EEA8C20A-BDDB-4A2C-9BAD-C9EAC73C816B}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+		README.MD = README.MD
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEE12EBD-0C99-47B6-905D-9BCB9701C223}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE12EBD-0C99-47B6-905D-9BCB9701C223}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE12EBD-0C99-47B6-905D-9BCB9701C223}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FEE12EBD-0C99-47B6-905D-9BCB9701C223}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE12EBD-0C99-47B6-905D-9BCB9701C223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F5D39AE-0812-427B-B871-D0156AB968E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F5D39AE-0812-427B-B871-D0156AB968E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F5D39AE-0812-427B-B871-D0156AB968E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F5D39AE-0812-427B-B871-D0156AB968E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4628A328-D706-440B-9161-7EBAFC5D4F19}
+	EndGlobalSection
+EndGlobal
